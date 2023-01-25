@@ -1,0 +1,17 @@
+{
+    "name": "gfoliver/structure",
+    "description": "A package to help develop laravel applications",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Guilherme Fleck Oliveira",
+            "email": "guilhermefleckoliveira@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Gfoliver\\Structure\\": "src/"
+        }
+    },
+    "require": {}
+}
