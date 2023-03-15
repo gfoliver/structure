@@ -1,6 +1,6 @@
 <?php
 
-namespace Gfliver\Structure\Utils;
+namespace Gfoliver\Structure\Utils;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;

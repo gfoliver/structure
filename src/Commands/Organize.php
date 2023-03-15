@@ -23,7 +23,7 @@ class Organize extends \Illuminate\Console\Command
         {
             $environments = [];
             // while the input isnt empty keep asking and appending to $environments array
-            while ($environment = $this->ask('Environment name (leave empty to finish):'))
+            while ($environment = $this->ask('Environment name (leave empty to finish)'))
             {
                 $environments[] = $environment;
             }

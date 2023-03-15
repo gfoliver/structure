@@ -19,7 +19,7 @@ class MakeService extends Make
         $this->info('=============================');
         $this->newLine(2);
 
-        $name = $this->ask('Service name:');
+        $name = $this->ask('Service name');
         // turn name into StudlyCase
         $name = $this->studly($name);
         // if the name doesnt include Service, add it
@@ -31,12 +31,12 @@ class MakeService extends Make
 
         if ($this->hasMultipleEnvironments()) {
             $environments = $this->getEnvironments();
-            $environment = $this->choice('Environment:', $environments);
+            $environment = $this->choice('Environment', $environments);
         }
 
         $namespace = 'App\\Core\\' . ($environment ? $environment . '\\' : '') . 'Services';
 
-        $this->save('IService.php', $environment, $namespace, 'I' . $name, 'Services/Contracts');
+        $this->save('IService.php', $environment, $namespace, $name, 'Services/Contracts');
         $this->save('Service.php', $environment, $namespace, $name, 'Services');
 
         $this->newLine(2);

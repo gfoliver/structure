@@ -19,7 +19,7 @@ class MakeRepository extends Make
         $this->info('=============================');
         $this->newLine(2);
 
-        $name = $this->ask('Repository name:');
+        $name = $this->ask('Repository name');
         // turn name into StudlyCase
         $name = $this->studly($name);
         // if the name doesnt include Repository, add it
@@ -31,12 +31,12 @@ class MakeRepository extends Make
 
         if ($this->hasMultipleEnvironments()) {
             $environments = $this->getEnvironments();
-            $environment = $this->choice('Environment:', $environments);
+            $environment = $this->choice('Environment', $environments);
         }
 
         $namespace = 'App\\Core\\' . ($environment ? $environment . '\\' : '') . 'Repositories';
 
-        $this->save('IRepository.php', $environment, $namespace, 'I' . $name, 'Repositories/Contracts');
+        $this->save('IRepository.php', $environment, $namespace, $name, 'Repositories/Contracts');
         $this->save('Repository.php', $environment, $namespace, $name, 'Repositories');
 
         $this->newLine(2);
