@@ -43,12 +43,12 @@ abstract class Make extends Command
         return self::SOURCES_DIR . $file;
     }
 
-    protected function destination(string $environment, string $destination, string $name)
+    protected function destination($environment, string $destination, string $name)
     {
         return app_path('Core/' . ($environment ? $environment . '/' : '') . $destination . '/' . $name . '.php');
     }
 
-    protected function save(string $source, string $environment, string $namespace, string $name, string $destination)
+    protected function save(string $source, $environment, string $namespace, string $name, string $destination)
     {
         $contents = file_get_contents($this->source($source));
         $contents = str_replace('NAMESPACENAME', $namespace, $contents);
