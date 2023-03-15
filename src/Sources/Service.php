@@ -2,7 +2,7 @@
 
 namespace NAMESPACENAME;
 
-class SERVICENAMEService implements Contracts\ISERVICENAMEService
+class SERVICENAME implements Contracts\ISERVICENAME
 {
     //
 }

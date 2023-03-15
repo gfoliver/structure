@@ -22,6 +22,10 @@ class MakeRepository extends Make
         $name = $this->ask('Repository name:');
         // turn name into StudlyCase
         $name = $this->studly($name);
+        // if the name doesnt include Repository, add it
+        if (!str_contains($name, 'Repository')) {
+            $name .= 'Repository';
+        }
         
         $environment = null;
 

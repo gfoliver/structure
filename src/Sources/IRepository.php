@@ -2,7 +2,7 @@
 
 namespace NAMESPACENAME\Contracts;
 
-interface IREPONAMERepository
+interface IREPONAME
 {
     //
 }

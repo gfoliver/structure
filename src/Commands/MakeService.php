@@ -22,7 +22,11 @@ class MakeService extends Make
         $name = $this->ask('Service name:');
         // turn name into StudlyCase
         $name = $this->studly($name);
-        
+        // if the name doesnt include Service, add it
+        if (!str_contains($name, 'Service')) {
+            $name .= 'Service';
+        }
+
         $environment = null;
 
         if ($this->hasMultipleEnvironments()) {

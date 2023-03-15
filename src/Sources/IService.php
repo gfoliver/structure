@@ -2,7 +2,7 @@
 
 namespace NAMESPACENAME\Contracts;
 
-interface ISERVICENAMEService
+interface ISERVICENAME
 {
     //
 }

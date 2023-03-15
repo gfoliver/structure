@@ -2,7 +2,7 @@
 
 namespace NAMESPACENAME;
 
-class REPONAMERepository implements Contracts\IREPONAMERepository
+class REPONAME implements Contracts\IREPONAME
 {
     //
 }
