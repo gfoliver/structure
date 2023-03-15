@@ -2,7 +2,7 @@
 
 namespace Gfoliver\Structure\Commands;
 
-class MakeService extends Make
+class MakeRepository extends Make
 {
     protected $signature = 'make:repository';
 
