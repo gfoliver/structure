@@ -3,6 +3,8 @@
 namespace Gfoliver\Structure\Providers;
 
 use Gfoliver\Structure\Commands\Organize;
+use Gfoliver\Structure\Commands\MakeService;
+use Gfoliver\Structure\Commands\MakeRepository;
 
 class StructureProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -17,6 +19,8 @@ class StructureProvider extends \Illuminate\Support\ServiceProvider
         {
             $this->commands([
                 Organize::class,
+                MakeService::class,
+                MakeRepository::class
             ]);
         }
     }

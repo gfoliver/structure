@@ -4,22 +4,22 @@ namespace Gfoliver\Structure\Commands;
 
 class MakeService extends Make
 {
-    protected $signature = 'make:service';
+    protected $signature = 'make:repository';
 
-    protected $description = 'Create a new service';
+    protected $description = 'Create a new repository';
 
     protected function getConstName(): string
     {
-        return 'SERVICE';
+        return 'REPO';
     }
 
     public function handle()
     {
-        $this->info('Creating a new service!');
+        $this->info('Creating a new repository!');
         $this->info('=============================');
         $this->newLine(2);
 
-        $name = $this->ask('Service name:');
+        $name = $this->ask('Repository name:');
         // turn name into StudlyCase
         $name = $this->studly($name);
         
@@ -30,10 +30,10 @@ class MakeService extends Make
             $environment = $this->choice('Environment:', $environments);
         }
 
-        $namespace = 'App\\Core\\' . ($environment ? $environment . '\\' : '') . 'Services';
+        $namespace = 'App\\Core\\' . ($environment ? $environment . '\\' : '') . 'Repositories';
 
-        $this->save('IService.php', $environment, $namespace, 'I' . $name, 'Services/Contracts');
-        $this->save('Service.php', $environment, $namespace, $name, 'Services');
+        $this->save('IRepository.php', $environment, $namespace, 'I' . $name, 'Repositories/Contracts');
+        $this->save('Repository.php', $environment, $namespace, $name, 'Repositories');
 
         $this->newLine(2);
 
