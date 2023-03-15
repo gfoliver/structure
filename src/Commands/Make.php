@@ -8,7 +8,7 @@ abstract class Make extends Command
 {
     const SOURCES_DIR = __DIR__ . '/../Sources/';
 
-    protected $defaultFolders = ['.', '..', 'Constants', 'QueryFilters', 'Traits', 'Utils'];
+    protected $defaultFolders = ['.', '..', 'Constants', 'QueryFilters', 'Traits', 'Utils', 'Models'];
 
     protected abstract function getConstName(): string;
 
