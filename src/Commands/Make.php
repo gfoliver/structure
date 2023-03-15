@@ -15,7 +15,7 @@ abstract class Make extends Command
     protected function hasMultipleEnvironments()
     {
         // read if core folder has environments by checking if a folder Services os Repositories exists directly under the App/Core directory
-        return is_dir(app_path('Core/Services'));
+        return !is_dir(app_path('Core/Services'));
     }
 
     protected function getEnvironments()
